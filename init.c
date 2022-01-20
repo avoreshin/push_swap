@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 22:09:18 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/17 22:21:21 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/01/20 20:15:53 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/01/20 20:38:58 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "include/push_swap.h"
 
-#include <stdio.h>
-#include <stdlib.h>
+t_unit *ft_init_unit(void)
+{
+	t_unit	*tmp;
 
-char	**ft_split(char const *s, char c);
-int		ft_atoi(const char *str);
+	tmp = (t_unit *) malloc(sizeof(t_unit));
+	tmp->index = 0;
+	tmp->num = 0;
+	tmp->next = NULL;
+	return (tmp);
+}
 
-#endif
+t_stack *ft_init_stack(void)
+{
+	t_stack *new;
+
+	new = (t_stack *) malloc(sizeof(t_stack));
+	if(!new)
+		exit(EXIT_FAILURE);
+		new->A = NULL;
+		new->B = NULL;
+		new->num_A = 0;
+		new->num_B = 0;
+	return (new);
+}
