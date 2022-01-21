@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push-swap.h"
+#include <stdlib.h>
 
 int	ft_count_words(char *s, char c)
 {

@@ -36,3 +36,16 @@ t_stack *ft_init_stack(void)
 		new->num_B = 0;
 	return (new);
 }
+
+int	ft_new_size(t_unit *new)
+{
+	int	i;
+	
+	i = 0;
+	while (new)
+	{
+		i++;
+		new = new->next;
+	}
+	return (i);
+}

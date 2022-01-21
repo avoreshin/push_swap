@@ -17,7 +17,6 @@ void check(char **str)
 	while (*str)
 	{
 		int i = atoi(*str);
-		printf("%d\n", i);
 		str++;
 	}
 }
@@ -38,7 +37,7 @@ int ft_split_argv(int argc, char **argv)
 
 int main (int argc, char **argv)
 {
-	int		k;
+	int		count;
 	t_stack	*new;
 	t_unit	*tmp;
 
@@ -48,6 +47,7 @@ int main (int argc, char **argv)
 	new->A = ft_split_argv(argc, argv);
 	if (ft_check_duplicate(new->A))
 		ft_error_mes();
-	
-	
+	tmp = new->A;
+	count = ft_new_size(tmp);
+	ft_sort_stack(count, new);
 }
