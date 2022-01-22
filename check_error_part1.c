@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_error.c                                      :+:      :+:    :+:   */
+/*   check_error_part1.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 18:33:11 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/20 21:36:49 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/01/22 18:03:39 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
+
+void	ft_error_mes(void)
+{
+    write(1, "Error",5);
+    exit(EXIT_FAILURE);
+}
 
 int	ft_check_duplicate (t_unit *tmp2)
 {
@@ -47,6 +53,23 @@ int	ft_check_sorted(t_unit *tmp)
 	return (1);
 }
 
+int ft_check_content(char *split)
+{
+    int flag;
+    int len;
+
+    len = ft_strlen(split);
+    flag = ft_check_sing(split);
+    if (len - flag > 10)
+        return (EXIT_FAILURE);
+    else if (len - flag == 10)
+    {
+        if (ft_check_max(split))
+            return (EXIT_FAILURE);
+    }
+    return (EXIT_SUCCESS)
+}
+
 int	ft_check_split(char **split, t_unit **tmp)
 {
 	int i;
@@ -65,19 +88,4 @@ int	ft_check_split(char **split, t_unit **tmp)
 		i++;
 	}
 	return (EXIT_SUCCESS)
-}
-
-ft_check_digit()
-{}
-
-ft_check_max()
-{}
-
-ft_check_content()
-{}
-
-void	ft_error_mes(void)
-{
-	write(1, "Error",5);
-	exit(EXIT_FAILURE);
 }
