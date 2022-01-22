@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "./include/push_swap.h"
+#include <unistd.h>
 
 void	con_push_a(t_stack *new, t_unit *tmp_b)
 {
@@ -52,7 +53,7 @@ void	ft_push_a(t_stack *new, int i)
 		write(1, "pa\n", 3);
 }
 
-void	con_push_bb(t_stack **new, t_unit *stack_a)
+void	con_push_b(t_stack **new, t_unit *stack_a)
 {
 	t_unit	*stack_b;
 	
@@ -87,7 +88,7 @@ void	ft_push_b(t_stack **new, int i)
 		}
 		prev->next = NULL;
 	}
-	con_push_bb(new, stack_a);
+	con_push_b(new, stack_a);
 	if (i == 1)
 		write(1, "pb\n", 3);
 }
