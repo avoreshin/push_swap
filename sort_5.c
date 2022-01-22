@@ -58,7 +58,7 @@ void	ft_sort_5_num(t_stack *new)
 		while (content->rr > 0)
 		{
 			content->rr--;
-			rotate(&new->A, 1);
+			ft_rotate(&new->A, 1);
 		}
 	}
 	ft_push_b(&new, 1);
