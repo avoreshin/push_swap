@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 20:15:53 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/20 20:38:58 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../include/push_swap.h"
 
 t_unit *ft_init_unit(void)
 {

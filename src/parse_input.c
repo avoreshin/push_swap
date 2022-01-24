@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   parse_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 21:21:40 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/20 22:25:29 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
-void	ft_reverse_list(t_Unit **root)
+void	ft_reverse_list(t_unit **root)
 {
-	t_Unit	*prev;
-	t_Unit	*curr;
-	t_Unit	*next;
+	t_unit	*prev;
+	t_unit	*curr;
+	t_unit	*next;
 
 	prev = NULL;
 	curr = *root;
@@ -39,8 +39,8 @@ t_unit	*ft_split_argv(int argc, char **argv)
 
 	i = 1;
 	split = NULL;
-	tmp1 = ft_init_unit();
-	tmp2 = tmp2;
+	tmp= ft_init_unit();
+	tmp2 = tmp;
 	while (i < argc)
 	{
 		split = ft_split(argv[i], ' ');
@@ -52,9 +52,9 @@ t_unit	*ft_split_argv(int argc, char **argv)
 			tmp = tmp->next;
 		}
 		i++;
-		ft_free_arr(split);
+		ft_free_array(split);
 	}
 	ft_reverse_list(&tmp2);
-	return(tmp2)
+	return(tmp2);
 }
 

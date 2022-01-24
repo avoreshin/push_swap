@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_error_part1.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 18:33:11 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/22 18:03:39 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	ft_error_mes(void)
 {
@@ -67,7 +67,7 @@ int ft_check_content(char *split)
         if (ft_check_max(split))
             return (EXIT_FAILURE);
     }
-    return (EXIT_SUCCESS)
+    return (EXIT_SUCCESS);
 }
 
 int	ft_check_split(char **split, t_unit **tmp)
@@ -87,5 +87,5 @@ int	ft_check_split(char **split, t_unit **tmp)
 		}
 		i++;
 	}
-	return (EXIT_SUCCESS)
+	return (EXIT_SUCCESS);
 }

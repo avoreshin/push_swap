@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 20:56:42 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/20 21:13:54 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	ft_sort_4_num(t_stack *new)
 {
@@ -66,7 +66,7 @@ void	ft_sort_5_num(t_stack *new)
 	ft_push_a(new, 1);
 }
 
-void	ft_sort_5(int len, t_Stack *new)
+void	ft_sort_5(int len, t_stack *new)
 {
 	if (len == 4)
 		ft_sort_4_num(new);

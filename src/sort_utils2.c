@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_utils.c                                       :+:      :+:    :+:   */
+/*   sort_utils2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 20:56:42 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/22 20:05:57 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 t_unit	*ft_find_min_struct(t_unit *new)
 {
@@ -33,7 +33,7 @@ t_unit	*ft_find_min_struct(t_unit *new)
     return (tmp);
 }
 
-t_unit	*find_min_struct_2(t_stack *new)
+t_unit	*ft_find_min_struct_2(t_stack *new)
 {
     int		min;
     t_unit	*curr;
@@ -56,8 +56,8 @@ t_unit	*find_min_struct_2(t_stack *new)
 
 t_unit	*ft_find_max_struct(t_unit *new)
 {
-    t_Unit	*curr;
-    t_Unit	*tmp;
+    t_unit	*curr;
+    t_unit	*tmp;
 
     curr = new->next;
     tmp = new;

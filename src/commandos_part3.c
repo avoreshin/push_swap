@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   commandos_part3.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 20:56:42 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/22 20:21:11 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
-void	do_ra_b_rra_a(t_stack *stack_a, t_Unit *tmp_a, t_Unit *tmp_b)
+void	do_ra_b_rra_a(t_stack *stack_a, t_unit *tmp_a, t_unit *tmp_b)
 {
     while (tmp_a->rra > 0)
     {
@@ -54,7 +54,7 @@ void	do_rrr(t_stack *stack_a, t_unit *tmp_a, t_unit *tmp_b)
         ft_reverse(&stack_a->B, 2);
 }
 
-void	do_rr(t_Stack *stack_a, t_Unit *tmp_a, t_Unit *tmp_b)
+void	do_rr(t_stack *stack_a, t_unit *tmp_a, t_unit *tmp_b)
 {
     while (tmp_a->rr > 0 && tmp_b->rr > 0)
     {

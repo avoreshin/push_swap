@@ -6,30 +6,14 @@
 /*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 20:56:42 by jlamonic          #+#    #+#             */
-/*                                                                            */
+/*   Updated: 2022/01/22 21:44:46 by jlamonic         ###   ########.fr       */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
-
-void	ft_find_rr_rra(t_unit *new)
-{
-	int	size;
-	int	i;
-	
-	i = 1;
-	size = ft_new_size(new);
-	while (new)
-	{
-		new->rr = size - i;
-		new->rra = i;
-		i++;
-		new = new->next;
-	}
-}
+#include "../include/push_swap.h"
 
 int	ft_count_mark(t_unit *new)
 {
-    t_Unit	*tmp;
+    t_unit	*tmp;
     int		count;
 
     count = 1;
@@ -96,10 +80,10 @@ void	con_ft_put_mark(t_unit *curr, int count_dup, t_unit *prev, t_unit *new)
 
 void	ft_put_mark(t_unit *new, int num)
 {
-    t_Unit	*curr;
+    t_unit	*curr;
     int		count;
     int		count_dup;
-    t_Unit	*prev;
+    t_unit	*prev;
 
     count = 0;
     curr = new;

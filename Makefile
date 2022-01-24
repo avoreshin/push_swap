@@ -4,11 +4,17 @@ CFLAGS  = -Wall -Wextra -Werror
 
 CC   = gcc
 
-HEADER  = include/push_swap.h
+HEADER  = 					include/push_swap.h
 
 RM   = rm -f
 
-SRCS	=	push_swap.c
+SRCS	=					push_swap.c 			./src/check_error_part1.c	./src/check_error_part2.c	\
+							./src/commandos_part1.c	./src/commandos_part2.c		./src/commandos_part3.c		\
+							./src/find_mark.c		./src/ft_atoi.c				./src/ft_free_arr.c			\
+							./src/ft_isdigit.c		./src/ft_split.c			./src/ft_strlen.c			\
+							./src/init.c			./src/parse_input.c			./src/sort_3.c				\
+							./src/sort_5.c			./src/sort_utils.c			./src/sort_utils2.c			\
+							./src/commandos_part4.c
 
 SRCS_B  =   checker.c
 
@@ -22,7 +28,6 @@ all:   ${PUSH_SWAP}
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(PUSH_SWAP):  $(OBJS)  $(HEADER)
-				$(MAKE) -C ./libft
 				$(CC) $(OBJS) $(CFLAGS) -o $(PUSH_SWAP)
 
 $(CHECKER) :	$(OBJS_B)

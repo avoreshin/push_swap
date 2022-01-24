@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_free_arr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,24 +10,52 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../include/push_swap.h"
 
-int main (int argc, char **argv)
+void	ft_free_array(char **split)
 {
-	int		count;
-	t_stack	*new;
+	int	i;
+
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+}
+
+
+void	ft_free_stack2(t_stack *new)
+{
 	t_unit	*tmp;
 
-	if (argc < 2)
-		exit (EXIT_FAILURE);
-	new = ft_init_stack();
-	new->A = ft_split_argv(argc, argv);
-	if (ft_check_duplicate(new->A))
-		ft_error_mes();
-    if (ft_check_sorted(new->A))
-        exit (EXIT_FAILURE);
-    tmp = new->A;
-	count = ft_new_size(tmp);
-	ft_sort_stack(count, new);
-	ft_free_stack(&(new->A));
+	while (new->A)
+	{
+		tmp = new->A->next;
+		new->A = new->A->next;
+		free(tmp);
+	}
+	while (new->B)
+	{
+		tmp = new->B->next;
+		new->B = new->B->next;
+		free(tmp);
+	}
+	free (new);
+}
+
+void	ft_free_stack(t_unit **new)
+{
+	t_unit	*curr;
+	t_unit	*aux;
+
+	curr = *new;
+	while (curr)
+	{
+		aux = curr;
+		curr = curr->next;
+		free (aux);
+	}
+	*new = NULL;
 }

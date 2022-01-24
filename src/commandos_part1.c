@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_3.c                                             :+:      :+:    :+:   */
+/*   commandos_part1.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlamonic <jlamonic@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 20:56:42 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/20 21:13:54 by jlamonic         ###   ########.fr       */
+/*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
+/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	rrr(t_unit **new, t_unit **new_2, int i)
 {
@@ -57,8 +57,8 @@ void	ft_swap(t_unit **new, int num)
 
 void	ft_reverse(t_unit **new, int num)
 {
-	t_Unit	*first;
-	t_Unit	*last;
+	t_unit	*first;
+	t_unit	*last;
 	
 	first = *new;
 	if (first->next)
@@ -80,8 +80,8 @@ void	ft_reverse(t_unit **new, int num)
 
 void	ft_rotate(t_unit **new, int num)
 {
-	t_Unit	*tmp;
-	t_Unit	*prev;
+	t_unit	*tmp;
+	t_unit	*prev;
 
 	prev = *new;
 	tmp = *new;
