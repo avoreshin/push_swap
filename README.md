@@ -59,6 +59,12 @@ Push_swap Потому что Swap_push не такой естественный
 становится первым.
 - ``` ррр : рра и ррб``` одновременно
 
+```shell
+
+$ ARG=`ruby -e "puts (-540 .. 539).to_a.shuffle.join(' ')"`
+
+$ ./push_swap $ARG | ./checker_Mac $ARG
+```
 ##  Video
 Связанные списки [Cмотреть ▶](https://youtube.com/playlist?list=PLfqABt5AS4FmXeWuuNDS3XGENJO1VYGxl)
 
