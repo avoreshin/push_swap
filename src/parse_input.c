@@ -34,19 +34,19 @@ t_unit	*ft_split_argv(int argc, char **argv)
 {
 	int		i;
 	char	**split;
-	t_unit 	*tmp;
-	t_unit 	*tmp2;
+	t_unit	*tmp;
+	t_unit	*tmp2;
 
 	i = 1;
 	split = NULL;
-	tmp= ft_init_unit();
+	tmp = ft_init_unit();
 	tmp2 = tmp;
 	while (i < argc)
 	{
 		split = ft_split(argv[i], ' ');
-		if(ft_check_split(split, &tmp))
+		if (ft_check_split(split, &tmp))
 			ft_error_mes();
-		if(i < argc - 1)
+		if (i < argc - 1)
 		{
 			tmp->next = ft_init_unit();
 			tmp = tmp->next;
@@ -55,6 +55,5 @@ t_unit	*ft_split_argv(int argc, char **argv)
 		ft_free_array(split);
 	}
 	ft_reverse_list(&tmp2);
-	return(tmp2);
+	return (tmp2);
 }
-

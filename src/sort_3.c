@@ -6,7 +6,7 @@
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/01/26 23:29:28 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_find_max(t_unit *new)
 {
 	int	max;
-	
+
 	max = new->num;
 	while (new)
 	{
@@ -29,7 +29,7 @@ int	ft_find_max(t_unit *new)
 t_unit	*ft_find_min(t_unit *new)
 {
 	t_unit	*min;
-	
+
 	min = new;
 	while (new)
 	{
@@ -43,23 +43,23 @@ t_unit	*ft_find_min(t_unit *new)
 void	ft_sort_3_num(t_stack *new)
 {
 	int	max;
-	
-	max = ft_find_max(new->A);
-	if (new->A->next->num == max)
-		ft_reverse(&new->A, 1);
-	else if (new->A->next->next->num == max)
-		ft_rotate(&new->A, 1);
-	if (new->A->next->num < new->A->next->next->num)
-		ft_swap(&new->A, 1);
+
+	max = ft_find_max(new->a);
+	if (new->a->next->num == max)
+		ft_reverse(&new->a, 1);
+	else if (new->a->next->next->num == max)
+		ft_rotate(&new->a, 1);
+	if (new->a->next->num < new->a->next->next->num)
+		ft_swap(&new->a, 1);
 }
 
-int ft_sort_3(int len, t_stack *new)
+int	ft_sort_3(int len, t_stack *new)
 {
 	if (len == 1)
-		return (EXIT_FAILURE);
+		return (1);
 	else if (len == 2)
-		ft_swap(&new->A, 1);
+		ft_swap(&new->a, 1);
 	else if (len == 3)
 		ft_sort_3_num (new);
-	return (EXIT_SUCCESS);
+	return (0);
 }

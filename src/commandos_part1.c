@@ -6,7 +6,7 @@
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/01/26 23:16:11 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_swap(t_unit **new, int num)
 	t_unit	*last;
 	int		tmp;
 	int		mark;
-	
+
 	last = *new;
 	if ((*new)->next == NULL)
 		return ;
@@ -59,7 +59,7 @@ void	ft_reverse(t_unit **new, int num)
 {
 	t_unit	*first;
 	t_unit	*last;
-	
+
 	first = *new;
 	if (first->next)
 	{
@@ -100,4 +100,3 @@ void	ft_rotate(t_unit **new, int num)
 	if (num == 2)
 		write(1, "rb\n", 3);
 }
-

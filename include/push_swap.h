@@ -6,7 +6,7 @@
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/26 13:12:58 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/01/26 23:38:35 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,8 @@ char	**ft_split(char const *s, char c);
 int		ft_atoi(const char *str);
 size_t	ft_strlen(const char *s);
 int		ft_isdigit(int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_free_stack(t_unit **new);
 void	ft_free_array(char **split);
+void	ft_putstr_fd(char *s, int fd);
 #endif

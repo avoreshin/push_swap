@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   commandos_part4.c                                  :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlamonic <jlamonic@student.42.fr> >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
+/*   Created: 2021/10/08 17:42:27 by jlamonic          #+#    #+#             */
+/*   Updated: 2021/10/15 16:10:08 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ft_find_max_ab(int a, int b)
+/*
+** Печатает строку в заданный файловый дескриптор
+*/
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (a > b)
-		return (a);
-	return (b);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

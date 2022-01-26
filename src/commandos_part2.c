@@ -6,7 +6,7 @@
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/01/26 23:18:32 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 void	con_push_a(t_stack *new, t_unit *tmp_b)
 {
 	t_unit	*tmp_a;
-	
-	tmp_a = new->A;
+
+	tmp_a = new->a;
 	if (tmp_a)
 	{
 		while (tmp_a->next)
@@ -25,20 +25,20 @@ void	con_push_a(t_stack *new, t_unit *tmp_b)
 		tmp_a->next = tmp_b;
 	}
 	else
-		new->A = tmp_b;
+		new->a = tmp_b;
 }
 
 void	ft_push_a(t_stack *new, int i)
 {
 	t_unit	*tmp_b;
 	t_unit	*prev_b;
-	
-	tmp_b = new->B;
-	prev_b = new->B;
+
+	tmp_b = new->b;
+	prev_b = new->b;
 	if (tmp_b)
 	{
 		if (!tmp_b->next)
-			new->B = NULL;
+			new->b = NULL;
 		while (tmp_b->next)
 		{
 			prev_b = tmp_b;
@@ -56,10 +56,10 @@ void	ft_push_a(t_stack *new, int i)
 void	con_push_b(t_stack **new, t_unit *stack_a)
 {
 	t_unit	*stack_b;
-	
-	stack_b = (*new)->B;
-	if (!(*new)->B)
-		(*new)->B = stack_a;
+
+	stack_b = (*new)->b;
+	if (!(*new)->b)
+		(*new)->b = stack_a;
 	else
 	{
 		while (stack_b->next)
@@ -72,15 +72,15 @@ void	ft_push_b(t_stack **new, int i)
 {
 	t_unit	*stack_a;
 	t_unit	*prev;
-	
-	(*new)->num_B++;
-	stack_a = (*new)->A;
-	if (!(*new)->A)
+
+	(*new)->num_a++;
+	stack_a = (*new)->a;
+	if (!(*new)->a)
 		return ;
 	else
 	{
 		if (!stack_a->next)
-			(*new)->A = NULL;
+			(*new)->a = NULL;
 		while (stack_a->next)
 		{
 			prev = stack_a;

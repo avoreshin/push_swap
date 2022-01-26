@@ -6,13 +6,13 @@
 /*   By: jlamonic <jlamonic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 10:55:14 by jlamonic          #+#    #+#             */
-/*   Updated: 2022/01/24 10:55:14 by jlamonic         ###   ########.fr       */
+/*   Updated: 2022/01/26 23:27:00 by jlamonic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-t_unit *ft_init_unit(void)
+t_unit	*ft_init_unit(void)
 {
 	t_unit	*tmp;
 
@@ -23,24 +23,24 @@ t_unit *ft_init_unit(void)
 	return (tmp);
 }
 
-t_stack *ft_init_stack(void)
+t_stack	*ft_init_stack(void)
 {
-	t_stack *new;
+	t_stack	*new;
 
 	new = (t_stack *) malloc(sizeof(t_stack));
-	if(!new)
+	if (!new)
 		exit(EXIT_FAILURE);
-		new->A = NULL;
-		new->B = NULL;
-		new->num_A = 0;
-		new->num_B = 0;
+	new->a = NULL;
+	new->b = NULL;
+	new->num_a = 0;
+	new->num_b = 0;
 	return (new);
 }
 
 int	ft_new_size(t_unit *new)
 {
 	int	i;
-	
+
 	i = 0;
 	while (new)
 	{
