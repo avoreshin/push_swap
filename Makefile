@@ -24,6 +24,7 @@ OBJS_B   = ${SRCS_B:.c=.o}
 
 all:   ${PUSH_SWAP}
 
+
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
@@ -42,5 +43,8 @@ fclean:  clean
 		${RM} ${PUSH_SWAP} ${CHECKER}
 
 re:   fclean all
+
+test1:
+		./test.sh
 
 .PHONY:  all clean fclean re
