@@ -20,6 +20,7 @@ t_unit	*ft_init_unit(void)
 	tmp->index = 0;
 	tmp->num = 0;
 	tmp->next = NULL;
+	tmp->mark = 0;
 	return (tmp);
 }
 

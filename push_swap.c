@@ -12,7 +12,7 @@
 
 #include "include/push_swap.h"
 
-int main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int		count;
 	t_stack	*new;
@@ -21,13 +21,13 @@ int main (int argc, char **argv)
 	if (argc < 2)
 		exit (EXIT_FAILURE);
 	new = ft_init_stack();
-	new->A = ft_split_argv(argc, argv);
-	if (ft_check_duplicate(new->A))
+	new->a = ft_split_argv(argc, argv);
+	if (ft_check_duplicate(new->a))
 		ft_error_mes();
-    if (ft_check_sorted(new->A))
-        exit (EXIT_FAILURE);
-    tmp = new->A;
+	if (ft_check_sorted(new->a))
+		exit (EXIT_FAILURE);
+	tmp = new->a;
 	count = ft_new_size(tmp);
 	ft_sort_stack(count, new);
-	ft_free_stack(&(new->A));
+	ft_free_stack(&(new->a));
 }

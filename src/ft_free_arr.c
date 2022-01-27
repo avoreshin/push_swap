@@ -25,26 +25,6 @@ void	ft_free_array(char **split)
 	free(split);
 }
 
-
-void	ft_free_stack2(t_stack *new)
-{
-	t_unit	*tmp;
-
-	while (new->A)
-	{
-		tmp = new->A->next;
-		new->A = new->A->next;
-		free(tmp);
-	}
-	while (new->B)
-	{
-		tmp = new->B->next;
-		new->B = new->B->next;
-		free(tmp);
-	}
-	free (new);
-}
-
 void	ft_free_stack(t_unit **new)
 {
 	t_unit	*curr;

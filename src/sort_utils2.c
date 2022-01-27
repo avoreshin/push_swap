@@ -39,9 +39,9 @@ t_unit	*ft_find_min_struct_2(t_stack *new)
 	t_unit	*curr;
 	t_unit	*tmp;
 
-	min = new->A->num;
-	curr = new->A;
-	tmp = new->A;
+	min = new->a->num;
+	curr = new->a;
+	tmp = new->a;
 	while (curr)
 	{
 		if (min > curr->num)
@@ -79,10 +79,10 @@ void	ft_find_two_pairs(t_stack **new)
 	int		steps;
 
 	steps = 2147483647;
-	stack_b = (*new)->B;
+	stack_b = (*new)->b;
 	while (stack_b)
 	{
-		stack_a = ft_find_pair_from_a((*new)->A, stack_b->num);
+		stack_a = ft_find_pair_from_a((*new)->a, stack_b->num);
 		if (steps > ft_min_steps(stack_a, stack_b))
 		{
 			steps = ft_min_steps(stack_a, stack_b);

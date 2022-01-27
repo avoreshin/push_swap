@@ -16,8 +16,8 @@ void	ft_sort_4_num(t_stack *new)
 {
 	t_unit	*content;
 
-	ft_find_rr_rra(new->A);
-	content = ft_find_min(new->A);
+	ft_find_rr_rra(new->a);
+	content = ft_find_min(new->a);
 	if (content->rr >= content->rra)
 	{
 		while (content->rra > 0)
@@ -43,13 +43,13 @@ void	ft_sort_5_num(t_stack *new)
 {
 	t_unit	*content;
 
-	ft_find_rr_rra(new->A);
-	content = ft_find_min(new->A);
+	ft_find_rr_rra(new->a);
+	content = ft_find_min(new->a);
 	if (content->rr >= content->rra)
 	{
 		while (content->rra > 0)
 		{
-			ft_reverse(&new->A, 1);
+			ft_reverse(&new->a, 1);
 			content->rra--;
 		}
 	}
@@ -58,7 +58,7 @@ void	ft_sort_5_num(t_stack *new)
 		while (content->rr > 0)
 		{
 			content->rr--;
-			ft_rotate(&new->A, 1);
+			ft_rotate(&new->a, 1);
 		}
 	}
 	ft_push_b(&new, 1);

@@ -21,7 +21,7 @@ void	do_ra_b_rra_a(t_stack *stack_a, t_unit *tmp_a, t_unit *tmp_b)
 	}
 	while (tmp_b->rr > 0)
 	{
-		ft_rotate(&stack_a->B, 2);
+		ft_rotate(&stack_a->b, 2);
 		tmp_b->rr--;
 	}
 }
@@ -30,12 +30,12 @@ void	do_ra_a_rra_b(t_stack *stack_a, t_unit *tmp_a, t_unit *tmp_b)
 {
 	while (tmp_b->rra > 0)
 	{
-		ft_reverse(&stack_a->B, 2);
+		ft_reverse(&stack_a->b, 2);
 		tmp_b->rra--;
 	}
 	while (tmp_a->rr > 0)
 	{
-		ft_rotate(&stack_a->A, 1);
+		ft_rotate(&stack_a->a, 1);
 		tmp_a->rr--;
 	}
 }
@@ -49,23 +49,23 @@ void	do_rrr(t_stack *stack_a, t_unit *tmp_a, t_unit *tmp_b)
 		tmp_b->rra--;
 	}
 	while (tmp_a->rra-- > 0)
-		ft_reverse(&stack_a->A, 1);
+		ft_reverse(&stack_a->a, 1);
 	while (tmp_b->rra-- > 0)
-		ft_reverse(&stack_a->B, 2);
+		ft_reverse(&stack_a->b, 2);
 }
 
 void	do_rr(t_stack *stack_a, t_unit *tmp_a, t_unit *tmp_b)
 {
 	while (tmp_a->rr > 0 && tmp_b->rr > 0)
 	{
-		rr(&stack_a->A, &stack_a->B, 1);
+		rr(&stack_a->a, &stack_a->b, 1);
 		tmp_a->rr--;
 		tmp_b->rr--;
 	}
 	while (tmp_a->rr--)
-		ft_rotate(&stack_a->A, 1);
+		ft_rotate(&stack_a->a, 1);
 	while (tmp_b->rr--)
-		ft_rotate(&stack_a->B, 2);
+		ft_rotate(&stack_a->b, 2);
 }
 
 void	do_operations(t_unit *tmp_a, t_unit *tmp_b, t_stack **stack_a,

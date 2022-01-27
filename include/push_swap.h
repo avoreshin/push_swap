@@ -37,7 +37,10 @@ typedef struct s_stack
 
 t_unit	*ft_init_unit(void);
 t_stack	*ft_init_stack(void);
+int		ft_new_size(t_unit *new);
 t_unit	*ft_split_argv(int argc, char **argv);
+void	ft_reverse_list(t_unit **root);
+
 int		ft_check_duplicate(t_unit *tmp2);
 int		ft_check_sorted(t_unit *tmp);
 int		ft_check_split(char **split, t_unit **tmp);
@@ -47,7 +50,6 @@ int		ft_check_sing(char *split);
 int		ft_check_max(char *str);
 void	ft_error_mes(void);
 void	ft_sort_stack(int len, t_stack *new);
-int		ft_new_size(t_unit *new);
 void	ft_sort_stack(int len, t_stack *new);
 int		ft_sort_3(int len, t_stack *new);
 void	ft_sort_5(int len, t_stack *new);

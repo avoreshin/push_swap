@@ -39,8 +39,8 @@ t_unit	*ft_split_argv(int argc, char **argv)
 
 	i = 1;
 	split = NULL;
-	tmp = ft_init_unit();
-	tmp2 = tmp;
+	tmp2 = ft_init_unit();
+	tmp = tmp2;
 	while (i < argc)
 	{
 		split = ft_split(argv[i], ' ');

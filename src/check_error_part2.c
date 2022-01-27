@@ -42,7 +42,7 @@ int	ft_check_max(char *str)
 	if (str[0] == '-')
 	{
 		if (ft_atoi(str) > 0)
-			return (EXIT_FAILURE);
+			return (1);
 	}
 	else if (ft_atoi(str) < 0)
 		return (1);
