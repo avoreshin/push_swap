@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/include/push_swap.h"
-
-#include "get_next_line.h"
+#include "include/push_swap.h"
 
 int	get_next_line(char **line)
 {
@@ -23,7 +21,7 @@ int	get_next_line(char **line)
 	*line = malloc(4 * 1024 * 1024);
 	if (!line)
 		return (-1);
-	readed = read(0, *line + i, 1);
+	rez = read(0, *line + i, 1);
 	while (rez > 0)
 	{
 		if ((*line)[i] == '\n')
@@ -35,7 +33,7 @@ int	get_next_line(char **line)
 	return (rez);
 }
 
-void	do_command(char *line, t_Stack **new)
+void	do_command(char *line, t_stack **new)
 {
 	if (ft_strncmp(line, "sa", 3) == 0)
 		ft_swap(&(*new)->a, 0);
@@ -61,12 +59,12 @@ void	do_command(char *line, t_Stack **new)
 		ft_error_mes();
 }
 
-void	read_commands(t_Stack **new)
+void	read_commands(t_stack **new)
 {
 	char	*line;
 
 	line = NULL;
-	while (get_next_line(0, &line))
+	while (get_next_line(&line))
 	{
 		do_command(line, new);
 		free(line);
@@ -76,7 +74,7 @@ void	read_commands(t_Stack **new)
 
 int	main(int argc, char **argv)
 {
-	t_Stack	*new;
+	t_stack	*new;
 
 	if (argc < 2)
 		exit (1);
@@ -91,5 +89,5 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("OK\n", 1);
 	else
 		ft_putstr_fd("KO\n", 1);
-	ft_free_stack(&(new)->A);
+	ft_free_stack(&(new)->a);
 }
